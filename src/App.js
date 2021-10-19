@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
@@ -28,27 +28,27 @@ function App() {
 
       {loading && (
         <motion.div
-          className="z-50 bg-white w-screen h-screen absolute "
+          className="z-50 bg-white w-screen h-screen fixed "
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 2 }}
         >
           <Loader
             key="loading"
-            className="z-50 bg-white w-screen h-screen absolute "
+            className="z-50 bg-white w-screen h-screen fixed "
           />
         </motion.div>
       )}
 
-      <AnimationRevealPage key="group">
+      <><AnimationRevealPage key="group">
         <Landing />
         <Flipcard />
         <Slider />
         <Events />
         <SwipeToSlide />
         <Partners />
-        <Footer />
-      </AnimationRevealPage>
+        
+      </AnimationRevealPage><Footer /></>
     </AnimatePresence>
     //Commit this
   );

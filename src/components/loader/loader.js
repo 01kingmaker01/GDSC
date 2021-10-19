@@ -14,7 +14,7 @@ const Loader = () => {
 
   return (
     <div
-      className="absolute top-0 left-0 right-0 loader z-50 bg-white h-screen w-screen"
+      className="fixed top-0 left-0 right-0 loader z-50 bg-white h-screen w-screen"
       ref={animationContainer}
       key="loaderJSON"
     />
